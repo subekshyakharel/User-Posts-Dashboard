@@ -13,6 +13,7 @@ export const getUsers = async()=>{
             throw new Error("Failed to fetch users")
         }
         const users: User[] = await response.json();
+        console.log(users)
         return users;
     } catch (error) {
         console.error('Error fetching users:', error);
@@ -30,6 +31,7 @@ export const getPostsByUserId = async(userId:number)=>{
         }
 
         const posts: Post[] = await response.json();
+        console.log(posts)
         return posts;
     } catch (error) {
         console.error('Error fetching posts:', error);

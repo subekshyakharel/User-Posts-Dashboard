@@ -1,8 +1,10 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit"
-import { persistStore } from "redux-persist";
+import postReducer from "./slices/postSlice";
+import userReducer from "./slices/userSlice";
 
 const rootReducer = combineReducers({
-
+users: userReducer,
+posts: postReducer,
 })
 
 export const store = configureStore({
